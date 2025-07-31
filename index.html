@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Leptos App</title>
+    <!-- Add a plain CSS file: see https://trunkrs.dev/assets/#css -->
+    <!-- If using Tailwind with Leptos CSR, see https://trunkrs.dev/assets/#tailwind instead-->
+    <link rel="stylesheet" href="/leptos002/styles-b5eb075cb5908791.css" integrity="sha384-z81odaZQ6a5WhRrkbxOfk6unNzh76wIzcnOsVEZrWICZlAB3CP0qZHEFT9ZauTJb"/>
+
+    <!-- Include favicon in dist output: see https://trunkrs.dev/assets/#icon -->
+    <link rel="icon" href="/leptos002/favicon-e9cbd8f50cc65bf2.ico" integrity="sha384-YobgLXwtz0GhXVUTHml49p32guapVFlEG8UpQdDVN3kekOqkQi+qSXEpwp+yM4BW"/>
+
+    <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
+    
+<script type="module">
+import init, * as bindings from '/leptos002/leptos002-df3fde4169b052a5.js';
+const wasm = await init({ module_or_path: '/leptos002/leptos002-df3fde4169b052a5_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  <link rel="modulepreload" href="/leptos002/leptos002-df3fde4169b052a5.js" crossorigin="anonymous" integrity="sha384-LOM/Jf6C8eFTe/IrSEzD9p69CyZp1JrgQKdnjXSMYDpBNeCyax3KLn0B/Hi0YhDL"><link rel="preload" href="/leptos002/leptos002-df3fde4169b052a5_bg.wasm" crossorigin="anonymous" integrity="sha384-410+jJhGH1zWhMbGqlDQN6hJGIexD3+oleYVnLVI0BwzRLuYhxUDB+uQCkDgoj7z" as="fetch" type="application/wasm"></head>
+
+  <body></body>
+
+</html>
