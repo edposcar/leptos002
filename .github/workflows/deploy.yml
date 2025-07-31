@@ -6,11 +6,20 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3  # Aggiornato a v3
+      
+      # QUESTA È LA PARTE ESSENZIALE CHE MANCA
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      
       - name: Install Trunk
         run: cargo install trunk
       - name: Build
         run: trunk build --release --public-url /${GITHUB_REPOSITORY#*/}/
+      - name: Create .nojekyll
+        run: touch dist/.nojekyll
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
