@@ -3,8 +3,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build-and-deploy:
@@ -26,10 +24,9 @@ jobs:
         version: 'latest'
     
     - name: Build
-      run: |
-        trunk build --release --public-url /leptos002/
+      run: trunk build --release
     
-    - name: Create .nojekyll file
+    - name: Create .nojekyll
       run: touch dist/.nojekyll
     
     - name: Deploy to GitHub Pages
