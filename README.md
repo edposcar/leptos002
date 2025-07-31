@@ -76,4 +76,4 @@ For further information about hosting Leptos CSR apps, please refer to [the Lept
 [Trunk]: https://github.com/trunk-rs/trunk
 [Trunk-instructions]: https://trunkrs.dev/assets/
 
-[deploy-csr]: https://book.leptos.dev/deployment/csr.html
+[deploy-csr]: https://book.leptos.dev/deployment/csr.html 
